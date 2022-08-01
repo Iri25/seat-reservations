@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+mainClassName = 'server.MainServer'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly project (':model')
+
+    compileOnly project (':persistence')
+
+    compileOnly project (':services')
+
+    compileOnly 'org.springframework:spring-context:5.0.4.RELEASE'
+
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}

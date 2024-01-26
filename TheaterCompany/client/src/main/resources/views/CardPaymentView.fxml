@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.CardPaymentController">
+   <children>
+      <TitledPane animated="false" layoutX="90.0" layoutY="55.0" prefHeight="291.0" prefWidth="412.0" text="Card Payment ">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="265.0" prefWidth="435.0">
+               <children>
+                  <TextField layoutX="158.0" layoutY="37.0" />
+                  <TextField layoutX="158.0" layoutY="81.0" />
+                  <TextField layoutX="158.0" layoutY="125.0" />
+                  <Label layoutX="34.0" layoutY="41.0" prefHeight="17.0" prefWidth="73.0" text="Name" />
+                  <Label layoutX="34.0" layoutY="85.0" prefHeight="17.0" prefWidth="109.0" text="Card number" />
+                  <Label layoutX="34.0" layoutY="128.0" prefHeight="18.0" prefWidth="92.0" text="Expiration date" />
+                  <Button layoutX="195.0" layoutY="218.0" mnemonicParsing="false" onAction="#handleSubmit" text="Submit" textFill="#101a69" />
+                  <Label layoutX="35.0" layoutY="177.0" text="Security code" />
+                  <TextField layoutX="158.0" layoutY="173.0" />
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TitledPane>
+   </children>
+</Pane>

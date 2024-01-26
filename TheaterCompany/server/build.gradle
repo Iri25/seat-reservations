@@ -3,8 +3,8 @@ plugins {
     id 'application'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'TheaterCompany'
+version '1.0'
 
 sourceCompatibility = 11
 mainClassName = 'server.MainServer'
@@ -14,13 +14,15 @@ repositories {
 }
 
 dependencies {
-    compileOnly project (':model')
+    implementation project (':model')
 
-    compileOnly project (':persistence')
+    implementation project (':persistence')
 
-    compileOnly project (':services')
+    implementation project (':services')
 
-    compileOnly 'org.springframework:spring-context:5.0.4.RELEASE'
+    implementation 'org.springframework:spring-context:5.3.27'
 
-    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.springframework:spring-context-support:5.3.27'
+
+    testImplementation group: 'junit', name: 'junit', version: '4.13.1'
 }

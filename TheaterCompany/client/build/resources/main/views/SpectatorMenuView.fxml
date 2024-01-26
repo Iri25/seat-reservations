@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.SpectatorMenuController">
+   <children>
+      <TabPane layoutX="19.0" layoutY="21.0" prefHeight="485.0" prefWidth="863.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Show">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="455.0" prefWidth="762.0">
+                     <children>
+
+                         <Button layoutX="805.0" layoutY="01.0" mnemonicParsing="false" onAction="#handleLogout" text="Logout">
+                             <font>
+                                 <Font name="System Bold" size="12.0" />
+                             </font>
+                         </Button>
+
+                        <TableView fx:id="showsTableView" layoutX="161.0" layoutY="119.0" onMouseClicked="#handleSelect" prefHeight="168.0" prefWidth="533.0">
+                          <columns>
+                            <TableColumn fx:id="idShow" prefWidth="56.000030517578125" text="ID " />
+                            <TableColumn fx:id="name" prefWidth="182.40000915527344" text="Name" />
+                              <TableColumn fx:id="date" prefWidth="100.800048828125" text="Date" />
+                              <TableColumn fx:id="time" prefWidth="91.199951171875" text="Hour" />
+                              <TableColumn fx:id="price" prefWidth="106.4000244140625" text="Price" />
+                          </columns>
+                        </TableView>
+
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Room Configuration">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8a8e91" height="406.0" layoutX="15.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="831.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cacdcf" height="205.0" layoutX="125.0" layoutY="202.0" stroke="BLACK" strokeType="INSIDE" width="615.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a9b1b8" height="65.0" layoutX="54.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" width="364.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a9b1b8" height="67.0" layoutX="449.0" layoutY="107.0" stroke="BLACK" strokeType="INSIDE" width="364.0" />
+
+                         <TextField alignment="CENTER" layoutX="400.0" layoutY="291.0" prefHeight="26.0" prefWidth="60.0" text="Scene" />
+                         <TextField alignment="CENTER" layoutX="205.0" layoutY="49.0" prefHeight="26.0" prefWidth="62.0" text="Lodge A" />
+                         <TextField alignment="CENTER" layoutX="606.0" layoutY="49.0" prefHeight="26.0" prefWidth="62.0" text="Lodge B" />
+
+                        <ComboBox fx:id="lodgeAComboBox" layoutX="59.0" layoutY="130.0" onAction="#handleLodge" prefHeight="26.0" prefWidth="354.0" promptText="Seat" />
+                        <ComboBox fx:id="lodgeBComboBox" layoutX="452.0" layoutY="125.0" onAction="#handleLodge" prefHeight="30.0" prefWidth="357.0" promptText="Seat" />
+
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab onSelectionChanged="#handleBooking" text="Buy Ticket">
+            <content>
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+
+                      <Label fx:id="labelMessage" layoutX="132.0" layoutY="60.0" prefHeight="30.0" prefWidth="518.0" text="Please, select the desired seat in the configuration room!" textFill="#7f2020">
+                         <font>
+                            <Font size="20.0" />
+                         </font>
+                      </Label>
+
+                      <TableView fx:id="bookingTableView" layoutX="97.0" layoutY="120.0" prefHeight="200.0" prefWidth="600.0">
+                         <columns>
+                          <TableColumn fx:id="nameShow" prefWidth="200" text="Show" />
+                          <TableColumn fx:id="dateShow" prefWidth="80" text="Date" />
+                          <TableColumn fx:id="timeShow" prefWidth="60" text="Time" />
+                          <TableColumn fx:id="priceShow" prefWidth="60" text="Price" />
+                          <TableColumn fx:id="lodgeSeat" prefWidth="60" text="Lodge" />
+                          <TableColumn fx:id="rowSeat" prefWidth="60" text="Row" />
+                          <TableColumn fx:id="numberSeat" prefWidth="80" text="Number" />
+                         </columns>
+                      </TableView>
+
+                      <Button layoutX="748.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleBuy" prefHeight="26.0" prefWidth="70.0" text="Buy">
+                         <font>
+                            <Font name="System Bold" size="12.0" />
+                         </font>
+                      </Button>
+
+                      <RadioButton fx:id="radioButtonCash" layoutX="748.0" layoutY="175.0" mnemonicParsing="false" text="Cash" />
+
+                      <RadioButton fx:id="radioButtonCard" layoutX="749.0" layoutY="211.0" mnemonicParsing="false" onAction="#handlePaymentByCard" text="Card" />
+
+                      <Label layoutX="723.0" layoutY="120.0" prefHeight="23.0" prefWidth="98.0" text="Method Payment">
+                         <font>
+                            <Font name="System Bold" size="12.0" />
+                         </font>
+                      </Label>
+
+                      <Label layoutX="710.0" layoutY="359.0" prefHeight="29.0" prefWidth="140.0" />
+
+                   </children>
+                 </AnchorPane>
+             </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

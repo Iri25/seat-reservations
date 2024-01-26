@@ -4,7 +4,7 @@ import domain.Entity;
 import domain.validators.ValidationException;
 
 /**
- * CRUD operations' repository interface
+ * CRUD operations repository interface
  * @param <ID> - type E must have an attribute of type ID
  * @param <E> -  type of entities saved in repository
  */

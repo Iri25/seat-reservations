@@ -1,0 +1,55 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'TheaterCompany'
+version '1.0'
+
+sourceCompatibility = 11
+mainClassName = 'client.MainClient'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project (':model')
+
+    implementation project (':persistence')
+
+    implementation project (':services')
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.10.0'
+
+    runtimeOnly group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.12.4'
+
+    implementation 'org.springframework:spring-context:5.3.27'
+
+    implementation 'org.springframework:spring-context-support:5.3.27'
+
+    implementation 'org.openjfx:javafx-controls:17'
+
+    implementation 'org.openjfx:javafx-fxml:17'
+
+    testImplementation group: 'junit', name: 'junit', version: '4.13.1'
+}
+
+jar {
+    manifest {
+        attributes('Main-Class':'client.MainClient')
+    }
+    from {
+        configurations.runtimeClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+
+    duplicatesStrategy = 'exclude'
+}
+
+javafx {
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+    version = '17.0.0.1'
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:properties id="jdbcProps" location="classpath:app.config"/>
+
+    <bean id="loginRepository" class="repository.jdbc.LoginJdbcRepository">
+        <constructor-arg ref="jdbcProps" />
+    </bean>
+
+    <bean id="spectatorRepository" class="repository.jdbc.SpectatorJdbcRepository">
+        <constructor-arg ref="jdbcProps" />
+    </bean>
+
+    <bean id="showRepository" class="repository.jdbc.ShowJdbcRepository">
+        <constructor-arg ref="jdbcProps" />
+    </bean>
+
+    <bean id="seatRepository" class="repository.jdbc.SeatJdbcRepository">
+        <constructor-arg ref="jdbcProps" />
+    </bean>
+
+    <bean id="ticketRepository" class="repository.jdbc.TicketJdbcRepository">
+        <constructor-arg ref="jdbcProps" />
+        <constructor-arg ref="showRepository" />
+        <constructor-arg ref="seatRepository" />
+    </bean>
+
+    <bean id="bookingRepository" class="repository.jdbc.BookingJdbcRepository">
+        <constructor-arg ref="jdbcProps" />
+        <constructor-arg ref="spectatorRepository" />
+        <constructor-arg ref="ticketRepository" />
+    </bean>
+
+    <bean id="serv" class="server.Server">
+        <constructor-arg ref="loginRepository"/>
+        <constructor-arg ref="spectatorRepository"/>
+        <constructor-arg ref="showRepository"/>
+        <constructor-arg ref="seatRepository"/>
+        <constructor-arg ref="ticketRepository"/>
+        <constructor-arg ref="bookingRepository"/>
+
+    </bean>
+
+    <!-- HTTP Invoker Exporter -->
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="TheaterCompany"/>
+        <property name="service" ref="serv"/>
+        <property name="serviceInterface" value="service.IServices"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+
+
+
+</beans>

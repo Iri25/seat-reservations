@@ -2,6 +2,8 @@ package service;
 
 import domain.*;
 
+import java.util.List;
+
 public interface IServices {
 
     Login login(Login user) throws Exception;
@@ -34,9 +36,7 @@ public interface IServices {
 
     Integer checkIdShow();
 
-    void buyTicket(Ticket ticket);
-
-    void booking(Booking booking);
+    void buyTicketBooking(Ticket ticket, Spectator spectator);
 
     void addShow(Show show);
 
@@ -45,4 +45,6 @@ public interface IServices {
     void updateShow(Show show);
 
     void updateSeatStatus(Seat seat);
+
+    Spectator getSpectator(String username);
 }

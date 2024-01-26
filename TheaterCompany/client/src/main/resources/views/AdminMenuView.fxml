@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.AdminMenuController">
+   <children>
+      <TabPane layoutX="39.0" layoutY="38.0" prefHeight="466.0" prefWidth="703.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Admin">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="360.0" prefWidth="638.0">
+                     <children>
+                        <Button layoutX="378.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleDelete" text="Delete">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+
+                        <Button layoutX="216.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleUpdate" text="Update">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+
+                        <Button layoutX="75.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleAdd" text="Add">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+
+                        <Button layoutX="540.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleLogout" text="Logout">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+
+                        <TableView fx:id="showsTableView" layoutX="34.0" layoutY="59.0" onMouseClicked="#handleSelect" prefHeight="188.0" prefWidth="462.0">
+                          <columns>
+                            <TableColumn fx:id="idShow" minWidth="3.20001220703125" prefWidth="36.79998779296875" text="Id" />
+                              <TableColumn fx:id="name" prefWidth="149.59998321533203" text="Name" />
+                            <TableColumn fx:id="date" prefWidth="104.800048828125" text="Date" />
+                              <TableColumn fx:id="time" prefWidth="86.39996337890625" text="Hour" />
+                              <TableColumn fx:id="price" prefWidth="85.60000610351562" text="Price" />
+                          </columns>
+                        </TableView>
+
+                        <TextField fx:id="textFieldName" layoutX="513.0" layoutY="86.0" promptText="Name" />
+
+                        <TextField fx:id="textFieldTime" layoutX="513.0" layoutY="178.0" promptText="Hour" />
+
+                        <DatePicker fx:id="datePickerDate" layoutX="513.0" layoutY="132.0" prefHeight="26.0" prefWidth="147.0" promptText="Date" />
+
+                        <TextField fx:id="textFieldPrice" layoutX="513.0" layoutY="218.0" promptText="Price" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

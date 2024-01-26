@@ -1,141 +1,212 @@
 package repository.jdbc;
 
-import domain.Booking;
-import domain.Spectator;
-import domain.Ticket;
+import domain.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import repository.BookingRepository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
 public class BookingJdbcRepository implements BookingRepository {
 
-    /**
-     *
-     */
     private JdbcUtils jdbcUtils;
+    private static final Logger logger = LogManager.getLogger();
+    private final SpectatorJdbcRepository spectatorJdbcRepository;
+    private final TicketJdbcRepository ticketJdbcRepository;
 
-    /**
-     *
-     */
-    private static final Logger logger= LogManager.getLogger();
-
-    /**
-     *
-     * @param properties
-     */
-    public BookingJdbcRepository(Properties properties) {
+    public BookingJdbcRepository(Properties properties, SpectatorJdbcRepository spectatorJdbcRepository, TicketJdbcRepository ticketJdbcRepository) {
 
         this.jdbcUtils = new JdbcUtils(properties);
+        this.spectatorJdbcRepository = spectatorJdbcRepository;
+        this.ticketJdbcRepository = ticketJdbcRepository;
     }
 
-    /**
-     * Default constructor
-     */
-    public BookingJdbcRepository() {}
+    public BookingJdbcRepository(SpectatorJdbcRepository spectatorJdbcRepository, TicketJdbcRepository ticketJdbcRepository) {
+        this.spectatorJdbcRepository = spectatorJdbcRepository;
+        this.ticketJdbcRepository = ticketJdbcRepository;
+    }
 
-    /**
-     *
-     * @param id
-     * @return
-     */
     @Override
     public Booking findOne(Integer id) {
         logger.traceEntry("Finding task with id {} ", id);
         Connection connection = jdbcUtils.getConnection();
         Booking booking = null;
-        try (PreparedStatement preparedStatement = connection.prepareStatement
-                ("SELECT * FROM Bookings WHERE id = ?")) {
-            preparedStatement.setInt(1, id);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    id = resultSet.getInt("id");
-                    Spectator spectator = (Spectator) resultSet.getObject("spectator");
-                    Ticket ticket = (Ticket) resultSet.getObject("ticket");
+        Savepoint savepoint = null;
+        try {
+            connection.setAutoCommit(false);
+            try (PreparedStatement preparedStatement = connection.prepareStatement
+                    ("SELECT * FROM Bookings WHERE id = ?")) {
+                preparedStatement.setInt(1, id);
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    if (resultSet.next()) {
+                        id = resultSet.getInt("id");
+                        Spectator spectator = (Spectator) resultSet.getObject("spectator");
+                        Ticket ticket = (Ticket) resultSet.getObject("ticket");
 
-                    booking = new Booking(spectator, ticket);
-                    booking.setId(id);
+                        booking = new Booking(spectator, ticket);
+                        booking.setId(id);
 
-                    return booking;
+                        savepoint = connection.setSavepoint("findOne");
+                        connection.commit();
+
+                        return booking;
+                    }
                 }
             }
         } catch (SQLException sqlException) {
             logger.error(sqlException);
+
+            try {
+                if (savepoint != null) {
+                    connection.rollback(savepoint);
+                } else {
+                    connection.rollback();
+                }
+            } catch (SQLException rollbackException) {
+                logger.error("Rollback failed: " + rollbackException.getMessage());
+                rollbackException.printStackTrace();
+            }
+
             sqlException.printStackTrace();
+        } finally {
+            try {
+                connection.setAutoCommit(true);
+                connection.close();
+            } catch (SQLException closeException) {
+                logger.error("Failed to close connection: " + closeException.getMessage());
+                closeException.printStackTrace();
+            }
         }
+
         logger.traceExit("No task found with id {}", id);
         return booking;
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public Iterable<Booking> findAll() {
         logger.traceEntry();
         Connection connection = jdbcUtils.getConnection();
-
         List<Booking> bookings = new ArrayList<>();
-        try (PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Tickets")) {
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                while (resultSet.next()) {
-                    int id = resultSet.getInt("id");
-                    Spectator spectator = (Spectator) resultSet.getObject("spectator");
-                    Ticket ticket = (Ticket) resultSet.getObject("ticket");
+        Savepoint savepoint = null;
+        try {
+            connection.setAutoCommit(false);
+            try (PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Bookings")) {
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    while (resultSet.next()) {
+                        int id = resultSet.getInt("id");
+                        int idSpectator = resultSet.getInt("idSpectator");
+                        int idTicket = resultSet.getInt("idTicket");
 
-                    Booking booking = new Booking(spectator, ticket);
-                    booking.setId(id);
+                        Spectator spectator = spectatorJdbcRepository.findOne(idSpectator);
+                        Ticket ticket = ticketJdbcRepository.findOne(idTicket);
+                        Booking booking = new Booking(spectator, ticket);
+                        booking.setId(id);
 
-                    bookings.add(booking);
+                        savepoint = connection.setSavepoint("findAll");
+                        connection.commit();
+
+                        bookings.add(booking);
+                    }
                 }
             }
-        }
-        catch (SQLException sqlException) {
+        } catch (SQLException sqlException) {
             logger.error(sqlException);
+
+            try {
+                if (savepoint != null) {
+                    connection.rollback(savepoint);
+                } else {
+                    connection.rollback();
+                }
+            } catch (SQLException rollbackException) {
+                logger.error("Rollback failed: " + rollbackException.getMessage());
+                rollbackException.printStackTrace();
+            }
+
             sqlException.printStackTrace();
+        } finally {
+            try {
+                connection.setAutoCommit(true);
+                connection.close();
+            } catch (SQLException closeException) {
+                logger.error("Failed to close connection: " + closeException.getMessage());
+                closeException.printStackTrace();
+            }
         }
         logger.traceExit(bookings);
         return bookings;
     }
 
-    /**
-     *
-     * @param entity
-     *         entity must be not null
-     */
     @Override
     public void save(Booking entity) {
         logger.traceEntry("Saving task {}", entity);
         Connection connection = jdbcUtils.getConnection();
+        try {
+            connection.setAutoCommit(false);
+            try (PreparedStatement preparedStatement = connection.prepareStatement
+                    ("INSERT INTO Bookings VALUES (?, ?, ?)")) {
+                preparedStatement.setInt(1, entity.getId());
+                preparedStatement.setInt(2, entity.getSpectator().getId());
+                preparedStatement.setInt(3, entity.getTicket().getId());
 
-        try (PreparedStatement preparedStatement = connection.prepareStatement
-                ("INSERT INTO Bookings VALUES (?, ?, ?)")) {
-            preparedStatement.setInt(1, entity.getId());
-            preparedStatement.setString(2, String.valueOf(entity.getSpectator()));
-            preparedStatement.setString(3, String.valueOf(entity.getTicket()));
+                int result = preparedStatement.executeUpdate();
 
-            int result = preparedStatement.executeUpdate();
-            logger.trace("Saved {} instances", result);
-        }
-        catch (SQLException sqlException) {
+                if (result == 1) {
+                    connection.commit();
+                } else {
+                    connection.rollback();
+                }
+
+                logger.trace("Saved {} instances", result);
+            }
+        } catch (SQLException sqlException) {
             logger.error(sqlException);
             sqlException.printStackTrace();
+
+            try {
+                connection.rollback();
+            } catch (SQLException rollbackException) {
+                logger.error("Rollback failed: " + rollbackException.getMessage());
+                rollbackException.printStackTrace();
+            }
+        } finally {
+            try {
+                connection.setAutoCommit(true);
+                connection.close();
+            } catch (SQLException closeException) {
+                logger.error("Failed to close connection: " + closeException.getMessage());
+                closeException.printStackTrace();
+            }
         }
         logger.traceExit();
     }
 
-    /**
-     *
-     * @param id
-     */
+    @Override
+    public void delete(Integer integer) {
+
+    }
+
+    @Override
+    public void update(Booking entity) {
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
     @Override
     public void delete(Integer id) {
         logger.traceEntry("Deleting task with {}", id);
@@ -152,11 +223,6 @@ public class BookingJdbcRepository implements BookingRepository {
         logger.traceExit();
     }
 
-    /**
-     *
-     * @param entity
-     *          entity must not be null
-     */
     @Override
     public void update(Booking entity) {
         logger.traceEntry("Updating task {}", entity);
@@ -177,199 +243,4 @@ public class BookingJdbcRepository implements BookingRepository {
         }
         logger.traceExit();
     }
-}
-
-//package repository.jdbc;
-//
-//import domain.Booking;
-//import domain.Ticket;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
-//import org.hibernate.Session;
-//import org.hibernate.SessionFactory;
-//import org.hibernate.Transaction;
-//import org.hibernate.boot.MetadataSources;
-//import org.hibernate.boot.registry.StandardServiceRegistry;
-//import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-//import repository.BookingRepository;
-//import repository.jdbc.JdbcUtils;
-//
-//import java.sql.Connection;
-//import java.util.ArrayList;
-//import java.util.List;
-//import java.util.Properties;
-//
-//public class BookingJdbcRepository implements BookingRepository {
-//
-//    /**
-//     *
-//     */
-//    private JdbcUtils jdbcUtils;
-//
-//    /**
-//     *
-//     */
-//    private static final Logger logger= LogManager.getLogger();
-//
-//    /**
-//     *
-//     */
-//    static SessionFactory sessionFactory;
-//
-//    public BookingJdbcRepository(Properties properties) {
-//
-//        this.jdbcUtils = new JdbcUtils(properties);
-//        initialize();
-//    }
-//
-//    /**
-//     *
-//     */
-//    static void initialize() {
-//        final StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-//        try {
-//            sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
-//        }
-//        catch (Exception e) {
-//            StandardServiceRegistryBuilder.destroy(registry);
-//        }
-//    }
-//
-//    /**
-//     *
-//     */
-//    static void close() {
-//        if (sessionFactory != null) sessionFactory.close();
-//    }
-//
-//    /**
-//     *
-//     * @param id
-//     * @return
-//     */
-//    @Override
-//    public Booking findOne(Integer id) {
-//        logger.traceEntry("Finding task with id {} ", id);
-//        Connection connection = jdbcUtils.getConnection();
-//
-//        List<Booking> result = null;
-//        try (Session session = sessionFactory.openSession()) {
-//            Transaction transaction = null;
-//            try {
-//                transaction = session.beginTransaction();
-//                result = session.createQuery("FROM Bookings WHERE id = :id", Booking.class)
-//                        .setParameter("id", id).list();
-//                transaction.commit();
-//            }
-//            catch (RuntimeException exception) {
-//                if (transaction != null) transaction.rollback();
-//            }
-//        }
-//        logger.traceExit("No task found with id {}", id);
-//        return result.get(0);
-//    }
-//
-//    /**
-//     *
-//     * @return
-//     */
-//    @Override
-//    public Iterable<Booking> findAll() {
-//        logger.traceEntry();
-//        Connection connection = jdbcUtils.getConnection();
-//
-//        List<Booking> bookings = new ArrayList<>();
-//        try (Session session = sessionFactory.openSession()) {
-//            Transaction transaction = null;
-//            try {
-//                transaction = session.beginTransaction();
-//                bookings = session.createQuery("FROM Bookings ", Booking.class).list();
-//                transaction.commit();
-//            }
-//            catch (RuntimeException exception) {
-//                if (transaction != null) transaction.rollback();
-//            }
-//        }
-//        return bookings;
-//    }
-//
-//    /**
-//     *
-//     * @param entity
-//     *         entity must be not null
-//     */
-//    @Override
-//    public void save(Booking entity) {
-//        logger.traceEntry("Saving task {}", entity);
-//        Connection connection = jdbcUtils.getConnection();
-//
-//        try (Session session = sessionFactory.openSession()) {
-//            Transaction transaction = null;
-//            try {
-//                transaction = session.beginTransaction();
-//                int id;
-//                try {
-//                    id = session.createQuery("SELECT MAX(id) FROM Bookings", Integer.class).getSingleResult() + 1;
-//                }
-//                catch (Exception exception) {
-//                    id = 1;
-//                }
-//                entity.setId(id);
-//                session.save(entity);
-//                transaction.commit();
-//            }
-//            catch (Exception exception) {
-//                if (transaction != null) transaction.rollback();
-//            }
-//        }
-//        logger.traceExit();
-//    }
-//
-//    /**
-//     *
-//     * @param id
-//     */
-//    @Override
-//    public void delete(Integer id) {
-//        logger.traceEntry("Deleting task with {}", id);
-//        Connection connection = jdbcUtils.getConnection();
-//
-//        try (Session session = sessionFactory.openSession()) {
-//            Transaction transaction = null;
-//            try {
-//                transaction = session.beginTransaction();
-//                session.delete(id);
-//                transaction.commit();
-//            }
-//            catch (RuntimeException exception) {
-//                if (transaction != null) transaction.rollback();
-//            }
-//        }
-//        logger.traceExit();
-//    }
-//
-//    /**
-//     *
-//     * @param entity
-//     *          entity must not be null
-//     */
-//    @Override
-//    public void update(Booking entity) {
-//        logger.traceEntry("Updating task {}", entity);
-//        Connection connection = jdbcUtils.getConnection();
-//
-//        try (Session session = sessionFactory.openSession()) {
-//            Transaction transaction = null;
-//            try {
-//                transaction = session.beginTransaction();
-//                session.update(entity);
-//                transaction.commit();
-//            }
-//            catch (RuntimeException exception) {
-//                if (transaction != null) transaction.rollback();
-//            }
-//        }
-//        logger.traceExit();
-//    }
-//}
-//
+*/

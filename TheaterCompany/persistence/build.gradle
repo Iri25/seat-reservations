@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'TheaterCompany'
+version '1.0'
 
 sourceCompatibility = 11
 
@@ -12,15 +12,16 @@ repositories {
 }
 
 dependencies {
-    compileOnly project (':model')
+    implementation project (':model')
 
-    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.14.1'
 
-    compileOnly group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.14.1'
+    runtimeOnly group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.1'
 
-    compileOnly group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.14.1'
+    runtimeOnly group: 'org.xerial', name: 'sqlite-jdbc', version: '3.41.2.2'
 
-    runtimeOnly group: 'org.xerial', name: 'sqlite-jdbc', version: '3.34.0'
+    runtimeOnly 'org.hibernate:hibernate-core:5.5.6.Final'
 
-    compileOnly 'org.hibernate:hibernate-core:5.2.10.Final'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.1'
 }
+

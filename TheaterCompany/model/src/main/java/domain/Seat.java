@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.*;
+
 /**
  * 
  */
@@ -106,13 +108,12 @@ public class Seat extends Entity<Integer>{
      */
     @Override
     public String toString() {
-        return "Seat{" +
-                "id=" + getId() +
-                ", lodge='" + lodge + '\'' +
-                ", row=" + row +
-                ", number=" + number +
-                ", status=" + status +
-                '}';
+        return "Seat: " +
+                "id " + getId() +
+                ", lodge " + lodge +
+                ", row " + row +
+                ", number " + number +
+                ", status " + status;
     }
 
     /**

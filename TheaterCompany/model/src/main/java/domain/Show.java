@@ -42,7 +42,6 @@ public class Show extends Entity<Integer> {
         this.price = price;
     }
 
-
     /**
      * @return
      */

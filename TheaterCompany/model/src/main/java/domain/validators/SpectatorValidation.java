@@ -19,7 +19,7 @@ public class SpectatorValidation implements Validator<Spectator> {
     /**
      * @param entity
      */
-    public void validate(Spectator entity) throws  ValidationException{
+    public void validate(Spectator entity) throws  ValidationException {
         Integer id = entity.getId();
         String username = entity.getUsername();
         String password = entity.getPassword();
@@ -32,17 +32,17 @@ public class SpectatorValidation implements Validator<Spectator> {
         if(id < 0)
             errors += "Id not valid! ";
 
-        if (username.equals(""))
+        if (username.isEmpty())
             errors += "Username field is empty! ";
         if (username.length() < 4)
             errors += "Username should have at least four characters! ";
 
-        if (password.equals(""))
+        if (password.isEmpty())
             errors += "Password not valid! ";
         if (password.length() < 4)
             errors += "Password should have at least four characters! ";
 
-        if (firstName.equals(""))
+        if (firstName.isEmpty())
             errors += "First name not valid! ";
         if (firstName.length() < 3)
             errors += "First name should have at least three characters! ";
@@ -54,7 +54,7 @@ public class SpectatorValidation implements Validator<Spectator> {
             }
         }
 
-        if (lastName.equals(""))
+        if (lastName.isEmpty())
             errors += "Last name field is empty! ";
         if (lastName.length() < 3)
             errors += "Last name should have at least three characters! ";
@@ -66,7 +66,7 @@ public class SpectatorValidation implements Validator<Spectator> {
             }
         }
 
-        if (email.equals(""))
+        if (email.isEmpty())
             errors += "E-mail field is empty! ";
         Pattern pattern1 = Pattern.compile("[a-z]$");
         Pattern pattern2 = Pattern.compile("[A-Z]$");
@@ -75,7 +75,7 @@ public class SpectatorValidation implements Validator<Spectator> {
                 || email.contains(pattern2.pattern()) || email.contains(pattern3.pattern())))
             errors += "E-mail not valid! ";
 
-        if(errors.length() > 0)
+        if(!errors.isEmpty())
             throw new ValidationException(errors);
     }
 

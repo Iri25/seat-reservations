@@ -1,0 +1,570 @@
+21:50:45.735 TRACE org.springframework.context.support.AbstractApplicationContext 626 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@24c4ddae, started on Fri Jan 26 21:50:45 EET 2024
+21:50:45.815 TRACE org.springframework.beans.factory.xml.XmlBeanDefinitionReader 323 loadBeanDefinitions - Loading XML bean definitions from class path resource [spring-server.xml]
+21:50:45.823 TRACE org.springframework.beans.factory.xml.DefaultDocumentLoader 74 loadDocument - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+21:50:45.865 TRACE org.springframework.beans.factory.xml.PluggableSchemaResolver 111 resolveEntity - Trying to resolve XML entity with public id [null] and system id [http://www.springframework.org/schema/beans/spring-beans.xsd]
+21:50:45.865 TRACE org.springframework.beans.factory.xml.PluggableSchemaResolver 154 getSchemaMappings - Loading schema mappings from [META-INF/spring.schemas]
+21:50:45.873 TRACE org.springframework.beans.factory.xml.PluggableSchemaResolver 160 getSchemaMappings - Loaded schema mappings: {http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context.xsd, https://www.springframework.org/schema/aop/spring-aop-4.3.xsd=org/springframework/aop/config/spring-aop.xsd, http://www.springframework.org/schema/cache/spring-cache-4.3.xsd=org/springframework/cache/config/spring-cache.xsd, http://www.springframework.org/schema/beans/spring-beans-4.0.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context.xsd, https://www.springframework.org/schema/tool/spring-tool-4.0.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, https://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/jee/spring-jee-4.3.xsd=org/springframework/ejb/config/spring-jee.xsd, http://www.springframework.org/schema/tool/spring-tool-4.3.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, https://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util.xsd, https://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, https://www.springframework.org/schema/lang/spring-lang-4.1.xsd=org/springframework/scripting/config/spring-lang.xsd, https://www.springframework.org/schema/context/spring-context-4.0.xsd=org/springframework/context/config/spring-context.xsd, https://www.springframework.org/schema/beans/spring-beans-4.2.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, http://www.springframework.org/schema/util/spring-util-4.2.xsd=org/springframework/beans/factory/xml/spring-util.xsd, https://www.springframework.org/schema/beans/spring-beans-4.0.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, http://www.springframework.org/schema/beans/spring-beans-4.2.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/util/spring-util-4.3.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/cache/spring-cache-4.1.xsd=org/springframework/cache/config/spring-cache.xsd, https://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang.xsd, http://www.springframework.org/schema/tool/spring-tool-4.1.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, http://www.springframework.org/schema/task/spring-task-4.3.xsd=org/springframework/scheduling/config/spring-task.xsd, https://www.springframework.org/schema/tool/spring-tool-4.2.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, https://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/task/spring-task-4.2.xsd=org/springframework/scheduling/config/spring-task.xsd, https://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop.xsd, http://www.springframework.org/schema/util/spring-util-4.0.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang.xsd, http://www.springframework.org/schema/context/spring-context-4.1.xsd=org/springframework/context/config/spring-context.xsd, http://www.springframework.org/schema/aop/spring-aop-4.2.xsd=org/springframework/aop/config/spring-aop.xsd, http://www.springframework.org/schema/jee/spring-jee-4.2.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache.xsd, https://www.springframework.org/schema/util/spring-util-4.1.xsd=org/springframework/beans/factory/xml/spring-util.xsd, https://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context.xsd, https://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang.xsd, https://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context.xsd, https://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop.xsd, https://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang.xsd, https://www.springframework.org/schema/cache/spring-cache-4.1.xsd=org/springframework/cache/config/spring-cache.xsd, https://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util.xsd, https://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, http://www.springframework.org/schema/jee/spring-jee-4.1.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context.xsd, http://www.springframework.org/schema/aop/spring-aop-4.1.xsd=org/springframework/aop/config/spring-aop.xsd, https://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util.xsd, https://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop.xsd, https://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee.xsd, http://www.springframework.org/schema/lang/spring-lang-4.1.xsd=org/springframework/scripting/config/spring-lang.xsd, http://www.springframework.org/schema/context/spring-context-4.3.xsd=org/springframework/context/config/spring-context.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util.xsd, https://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee.xsd, http://www.springframework.org/schema/task/spring-task-4.0.xsd=org/springframework/scheduling/config/spring-task.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task.xsd, https://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang.xsd, https://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop.xsd, http://www.springframework.org/schema/lang/spring-lang-4.3.xsd=org/springframework/scripting/config/spring-lang.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/task/spring-task-4.0.xsd=org/springframework/scheduling/config/spring-task.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang.xsd, https://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop.xsd, https://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/lang/spring-lang-4.3.xsd=org/springframework/scripting/config/spring-lang.xsd, https://www.springframework.org/schema/context/spring-context-4.3.xsd=org/springframework/context/config/spring-context.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task.xsd, https://www.springframework.org/schema/cache/spring-cache-4.3.xsd=org/springframework/cache/config/spring-cache.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache.xsd, https://www.springframework.org/schema/jee/spring-jee-4.0.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/aop/spring-aop-4.0.xsd=org/springframework/aop/config/spring-aop.xsd, https://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, https://www.springframework.org/schema/lang/spring-lang-4.2.xsd=org/springframework/scripting/config/spring-lang.xsd, https://www.springframework.org/schema/context/spring-context-4.1.xsd=org/springframework/context/config/spring-context.xsd, http://www.springframework.org/schema/context/spring-context-4.0.xsd=org/springframework/context/config/spring-context.xsd, http://www.springframework.org/schema/util/spring-util-4.3.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop.xsd, https://www.springframework.org/schema/beans/spring-beans-4.3.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/util/spring-util-4.0.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util.xsd, https://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, http://www.springframework.org/schema/cache/spring-cache-4.2.xsd=org/springframework/cache/config/spring-cache.xsd, https://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, https://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/aop/spring-aop-4.2.xsd=org/springframework/aop/config/spring-aop.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/tool/spring-tool-4.1.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, https://www.springframework.org/schema/jee/spring-jee-4.2.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/task/spring-task-4.1.xsd=org/springframework/scheduling/config/spring-task.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, http://www.springframework.org/schema/tool/spring-tool-4.0.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, http://www.springframework.org/schema/util/spring-util-4.1.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/context/spring-context-4.2.xsd=org/springframework/context/config/spring-context.xsd, https://www.springframework.org/schema/lang/spring-lang-4.0.xsd=org/springframework/scripting/config/spring-lang.xsd, https://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context.xsd, http://www.springframework.org/schema/jee/spring-jee-4.3.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/util/spring-util-4.2.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/aop/spring-aop-4.3.xsd=org/springframework/aop/config/spring-aop.xsd, https://www.springframework.org/schema/beans/spring-beans-4.1.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache.xsd, http://www.springframework.org/schema/beans/spring-beans-4.3.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context.xsd, https://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang.xsd, http://www.springframework.org/schema/beans/spring-beans-4.1.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, http://www.springframework.org/schema/cache/spring-cache-4.0.xsd=org/springframework/cache/config/spring-cache.xsd, http://www.springframework.org/schema/tool/spring-tool-4.2.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task.xsd, https://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/task/spring-task-4.3.xsd=org/springframework/scheduling/config/spring-task.xsd, http://www.springframework.org/schema/task/spring-task-4.2.xsd=org/springframework/scheduling/config/spring-task.xsd, https://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop.xsd, https://www.springframework.org/schema/tool/spring-tool-4.3.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, http://www.springframework.org/schema/lang/spring-lang-4.0.xsd=org/springframework/scripting/config/spring-lang.xsd, https://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task.xsd, https://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, https://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, http://www.springframework.org/schema/task/spring-task-4.1.xsd=org/springframework/scheduling/config/spring-task.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util.xsd, https://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/cache/spring-cache-4.2.xsd=org/springframework/cache/config/spring-cache.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang.xsd, https://www.springframework.org/schema/cache/spring-cache-4.0.xsd=org/springframework/cache/config/spring-cache.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context.xsd, http://www.springframework.org/schema/aop/spring-aop-4.0.xsd=org/springframework/aop/config/spring-aop.xsd, http://www.springframework.org/schema/jee/spring-jee-4.0.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans.xsd, https://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool.xsd, https://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop.xsd, https://www.springframework.org/schema/jee/spring-jee-4.1.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/aop/spring-aop-4.1.xsd=org/springframework/aop/config/spring-aop.xsd, https://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee.xsd, https://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task.xsd, https://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task.xsd, https://www.springframework.org/schema/context/spring-context-4.2.xsd=org/springframework/context/config/spring-context.xsd, https://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util.xsd, http://www.springframework.org/schema/lang/spring-lang-4.2.xsd=org/springframework/scripting/config/spring-lang.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool.xsd}
+21:50:45.875 TRACE org.springframework.beans.factory.xml.PluggableSchemaResolver 128 resolveEntity - Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans.xsd
+21:50:45.936 TRACE org.springframework.beans.factory.xml.PluggableSchemaResolver 111 resolveEntity - Trying to resolve XML entity with public id [null] and system id [http://www.springframework.org/schema/util/spring-util.xsd]
+21:50:45.937 TRACE org.springframework.beans.factory.xml.PluggableSchemaResolver 128 resolveEntity - Found XML schema [http://www.springframework.org/schema/util/spring-util.xsd] in classpath: org/springframework/beans/factory/xml/spring-util.xsd
+21:50:45.945 TRACE org.springframework.beans.factory.xml.PluggableSchemaResolver 111 resolveEntity - Trying to resolve XML entity with public id [null] and system id [https://www.springframework.org/schema/tool/spring-tool.xsd]
+21:50:45.946 TRACE org.springframework.beans.factory.xml.PluggableSchemaResolver 128 resolveEntity - Found XML schema [https://www.springframework.org/schema/tool/spring-tool.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool.xsd
+21:50:45.967 TRACE org.springframework.beans.factory.xml.DefaultNamespaceHandlerResolver 160 getHandlerMappings - Loading NamespaceHandler mappings from [META-INF/spring.handlers]
+21:50:45.969 TRACE org.springframework.beans.factory.xml.DefaultNamespaceHandlerResolver 166 getHandlerMappings - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler}
+21:50:45.999 TRACE org.springframework.beans.factory.xml.BeanDefinitionParserDelegate 458 parseBeanDefinitionElement - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.remoting.rmi.RmiServiceExporter#0]
+21:50:46.000 TRACE org.springframework.core.SimpleAliasRegistry 83 registerAlias - Alias definition 'org.springframework.remoting.rmi.RmiServiceExporter' registered for name 'org.springframework.remoting.rmi.RmiServiceExporter#0'
+21:50:46.000 DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions - Loaded 9 bean definitions from class path resource [spring-server.xml]
+21:50:46.000 TRACE org.springframework.beans.factory.support.AbstractBeanDefinitionReader 237 loadBeanDefinitions - Loaded 9 bean definitions from location pattern [classpath:spring-server.xml]
+21:50:46.059 TRACE org.springframework.context.support.AbstractApplicationContext 795 initMessageSource - No 'messageSource' bean, using [Empty MessageSource]
+21:50:46.063 TRACE org.springframework.context.support.AbstractApplicationContext 818 initApplicationEventMulticaster - No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
+21:50:46.065 TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory 924 preInstantiateSingletons - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@26bab2f1: defining beans [jdbcProps,loginRepository,spectatorRepository,showRepository,seatRepository,ticketRepository,bookingRepository,serv,org.springframework.remoting.rmi.RmiServiceExporter#0]; root of factory hierarchy
+21:50:46.066 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'jdbcProps'
+21:50:46.067 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 507 createBean - Creating instance of bean 'jdbcProps'
+21:50:46.080 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 610 doCreateBean - Eagerly caching bean 'jdbcProps' to allow for resolving potential circular references
+21:50:46.092 TRACE org.springframework.core.io.support.SpringFactoriesLoader 103 loadFactories - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
+21:50:46.094 TRACE org.springframework.beans.CachedIntrospectionResults 275 <init> - Getting BeanInfo for class [org.springframework.beans.factory.config.PropertiesFactoryBean]
+21:50:46.109 TRACE org.springframework.beans.CachedIntrospectionResults 280 <init> - Caching PropertyDescriptors for class [org.springframework.beans.factory.config.PropertiesFactoryBean]
+21:50:46.110 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'class' of type [java.lang.Class]
+21:50:46.117 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'fileEncoding' of type [java.lang.String]
+21:50:46.118 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'ignoreResourceNotFound' of type [boolean]
+21:50:46.118 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'localOverride' of type [boolean]
+21:50:46.118 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'location' of type [org.springframework.core.io.Resource]
+21:50:46.119 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'locations' of type [[Lorg.springframework.core.io.Resource;]
+21:50:46.119 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'object' of type [java.util.Properties]
+21:50:46.119 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'objectType' of type [java.lang.Class]
+21:50:46.120 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'properties' of type [java.util.Properties]
+21:50:46.120 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'propertiesArray' of type [[Ljava.util.Properties;]
+21:50:46.120 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'propertiesPersister' of type [org.springframework.util.PropertiesPersister]
+21:50:46.121 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'singleton' of type [boolean]
+21:50:46.130 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 1849 invokeInitMethods - Invoking afterPropertiesSet() on bean with name 'jdbcProps'
+21:50:46.130 TRACE org.springframework.core.io.support.PropertiesLoaderSupport 178 loadProperties - Loading properties file from class path resource [app.config]
+21:50:46.144 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 544 createBean - Finished creating instance of bean 'jdbcProps'
+21:50:46.145 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'loginRepository'
+21:50:46.145 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 507 createBean - Creating instance of bean 'loginRepository'
+21:50:46.151 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'jdbcProps'
+21:50:46.171 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 610 doCreateBean - Eagerly caching bean 'loginRepository' to allow for resolving potential circular references
+21:50:46.171 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 544 createBean - Finished creating instance of bean 'loginRepository'
+21:50:46.171 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'spectatorRepository'
+21:50:46.172 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 507 createBean - Creating instance of bean 'spectatorRepository'
+21:50:46.173 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'jdbcProps'
+21:50:46.176 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 610 doCreateBean - Eagerly caching bean 'spectatorRepository' to allow for resolving potential circular references
+21:50:46.176 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 544 createBean - Finished creating instance of bean 'spectatorRepository'
+21:50:46.177 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'showRepository'
+21:50:46.177 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 507 createBean - Creating instance of bean 'showRepository'
+21:50:46.178 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'jdbcProps'
+21:50:46.181 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 610 doCreateBean - Eagerly caching bean 'showRepository' to allow for resolving potential circular references
+21:50:46.181 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 544 createBean - Finished creating instance of bean 'showRepository'
+21:50:46.181 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'seatRepository'
+21:50:46.182 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 507 createBean - Creating instance of bean 'seatRepository'
+21:50:46.183 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'jdbcProps'
+21:50:46.186 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 610 doCreateBean - Eagerly caching bean 'seatRepository' to allow for resolving potential circular references
+21:50:46.186 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 544 createBean - Finished creating instance of bean 'seatRepository'
+21:50:46.186 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'ticketRepository'
+21:50:46.187 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 507 createBean - Creating instance of bean 'ticketRepository'
+21:50:46.188 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'jdbcProps'
+21:50:46.188 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'showRepository'
+21:50:46.188 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'seatRepository'
+21:50:46.191 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 610 doCreateBean - Eagerly caching bean 'ticketRepository' to allow for resolving potential circular references
+21:50:46.191 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 544 createBean - Finished creating instance of bean 'ticketRepository'
+21:50:46.192 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'bookingRepository'
+21:50:46.192 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 507 createBean - Creating instance of bean 'bookingRepository'
+21:50:46.194 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'jdbcProps'
+21:50:46.194 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'spectatorRepository'
+21:50:46.195 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'ticketRepository'
+21:50:46.197 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 610 doCreateBean - Eagerly caching bean 'bookingRepository' to allow for resolving potential circular references
+21:50:46.198 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 544 createBean - Finished creating instance of bean 'bookingRepository'
+21:50:46.198 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'serv'
+21:50:46.198 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 507 createBean - Creating instance of bean 'serv'
+21:50:46.199 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'loginRepository'
+21:50:46.199 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'spectatorRepository'
+21:50:46.199 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'showRepository'
+21:50:46.200 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'seatRepository'
+21:50:46.200 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'ticketRepository'
+21:50:46.200 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'bookingRepository'
+21:50:46.203 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 610 doCreateBean - Eagerly caching bean 'serv' to allow for resolving potential circular references
+21:50:46.204 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 544 createBean - Finished creating instance of bean 'serv'
+21:50:46.204 DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'org.springframework.remoting.rmi.RmiServiceExporter#0'
+21:50:46.204 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 507 createBean - Creating instance of bean 'org.springframework.remoting.rmi.RmiServiceExporter#0'
+21:50:46.207 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 610 doCreateBean - Eagerly caching bean 'org.springframework.remoting.rmi.RmiServiceExporter#0' to allow for resolving potential circular references
+21:50:46.207 TRACE org.springframework.beans.CachedIntrospectionResults 275 <init> - Getting BeanInfo for class [org.springframework.remoting.rmi.RmiServiceExporter]
+21:50:46.218 TRACE org.springframework.beans.CachedIntrospectionResults 280 <init> - Caching PropertyDescriptors for class [org.springframework.remoting.rmi.RmiServiceExporter]
+21:50:46.218 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'alwaysCreateRegistry' of type [boolean]
+21:50:46.218 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'beanClassLoader' of type [java.lang.ClassLoader]
+21:50:46.218 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'class' of type [java.lang.Class]
+21:50:46.219 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'clientSocketFactory' of type [java.rmi.server.RMIClientSocketFactory]
+21:50:46.219 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'interceptors' of type [[Ljava.lang.Object;]
+21:50:46.219 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'registerTraceInterceptor' of type [boolean]
+21:50:46.219 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'registry' of type [java.rmi.registry.Registry]
+21:50:46.220 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'registryClientSocketFactory' of type [java.rmi.server.RMIClientSocketFactory]
+21:50:46.220 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'registryHost' of type [java.lang.String]
+21:50:46.220 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'registryPort' of type [int]
+21:50:46.220 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'registryServerSocketFactory' of type [java.rmi.server.RMIServerSocketFactory]
+21:50:46.221 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'remoteInvocationExecutor' of type [org.springframework.remoting.support.RemoteInvocationExecutor]
+21:50:46.221 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'replaceExistingBinding' of type [boolean]
+21:50:46.221 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'serverSocketFactory' of type [java.rmi.server.RMIServerSocketFactory]
+21:50:46.221 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'service' of type [java.lang.Object]
+21:50:46.221 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'serviceInterface' of type [java.lang.Class]
+21:50:46.222 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'serviceName' of type [java.lang.String]
+21:50:46.222 TRACE org.springframework.beans.CachedIntrospectionResults 303 <init> - Found bean property 'servicePort' of type [int]
+21:50:46.225 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'serv'
+21:50:46.226 TRACE org.springframework.beans.TypeConverterDelegate 399 doConvertValue - Converting String to [class java.lang.Class] using property editor [org.springframework.beans.propertyeditors.ClassEditor@6e1d8f9e]
+21:50:46.233 TRACE org.springframework.beans.TypeConverterDelegate 399 doConvertValue - Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@51e8e6e6]
+21:50:46.234 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 1849 invokeInitMethods - Invoking afterPropertiesSet() on bean with name 'org.springframework.remoting.rmi.RmiServiceExporter#0'
+21:50:46.234 DEBUG org.springframework.remoting.rmi.RmiServiceExporter 396 getRegistry - Looking for RMI registry at port '1099'
+21:50:48.366 TRACE org.springframework.remoting.rmi.RmiServiceExporter 406 getRegistry - RMI registry access threw exception java.rmi.ConnectException: Connection refused to host: 192.168.3.14; nested exception is: 
+	java.net.ConnectException: Connection refused: connect
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:626) ~[?:?]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:217) ~[?:?]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:204) ~[?:?]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:344) ~[?:?]
+	at sun.rmi.registry.RegistryImpl_Stub.list(RegistryImpl_Stub.java:90) ~[?:?]
+	at org.springframework.remoting.rmi.RmiServiceExporter.testRegistry(RmiServiceExporter.java:423) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.rmi.RmiServiceExporter.getRegistry(RmiServiceExporter.java:402) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.rmi.RmiServiceExporter.getRegistry(RmiServiceExporter.java:380) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.rmi.RmiServiceExporter.getRegistry(RmiServiceExporter.java:339) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.rmi.RmiServiceExporter.prepare(RmiServiceExporter.java:270) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.rmi.RmiServiceExporter.afterPropertiesSet(RmiServiceExporter.java:232) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) [spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920) [spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) [spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) [spring-context-5.3.27.jar:5.3.27]
+	at server.MainServer.main(MainServer.java:9) [main/:?]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at sun.nio.ch.Net.connect0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.connect(Net.java:579) ~[?:?]
+	at sun.nio.ch.Net.connect(Net.java:568) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593) ~[?:?]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.net.Socket.connect(Socket.java:633) ~[?:?]
+	at java.net.Socket.connect(Socket.java:583) ~[?:?]
+	at java.net.Socket.<init>(Socket.java:507) ~[?:?]
+	at java.net.Socket.<init>(Socket.java:287) ~[?:?]
+	at sun.rmi.transport.tcp.TCPDirectSocketFactory.createSocket(TCPDirectSocketFactory.java:40) ~[?:?]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:620) ~[?:?]
+	... 24 more
+
+21:50:48.383 DEBUG org.springframework.remoting.rmi.RmiServiceExporter 407 getRegistry - Could not detect RMI registry - creating new one
+21:50:48.395 DEBUG org.springframework.remoting.rmi.RmiBasedExporter 61 getObjectToExport - RMI service [server.Server@7f69d591] is an RMI invoker
+21:50:48.412 TRACE org.springframework.aop.framework.JdkDynamicAopProxy 124 getProxy - Creating JDK dynamic proxy: SingletonTargetSource for target object [server.Server@7f69d591]
+21:50:48.431 DEBUG org.springframework.remoting.rmi.RmiServiceExporter 279 prepare - Binding service 'TheaterCompany' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[192.168.3.14:1099](local),objID:[0:0:0, 0]]]]
+21:50:48.443 TRACE org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory 544 createBean - Finished creating instance of bean 'org.springframework.remoting.rmi.RmiServiceExporter#0'
+21:50:48.445 TRACE org.springframework.context.support.AbstractApplicationContext 844 initLifecycleProcessor - No 'lifecycleProcessor' bean, using [DefaultLifecycleProcessor]
+21:50:48.445 TRACE org.springframework.beans.factory.support.AbstractBeanFactory 264 doGetBean - Returning cached instance of singleton bean 'lifecycleProcessor'
+21:50:48.450 TRACE org.springframework.core.env.PropertySourcesPropertyResolver 82 getProperty - Searching for key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties'
+21:50:48.450 TRACE org.springframework.core.env.PropertySourcesPropertyResolver 82 getProperty - Searching for key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemEnvironment'
+21:50:48.450 TRACE org.springframework.core.env.PropertySourcesPropertyResolver 96 getProperty - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source
+21:51:00.668 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'login'; parameter types [domain.Login]
+21:51:00.673 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.login
+21:51:00.676 TRACE repository.jdbc.LoginJdbcRepository 26 findEntity - Enter Finding task with username, password and status admin, admin, Admin 
+21:51:00.677 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:51:00.677 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:51:00.679 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:00.679 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:51:00.680 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:51:00.845 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:00.845 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@36cbdf28)
+21:51:00.854 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.login
+21:51:00.859 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getSpectator'; parameter types [java.lang.String]
+21:51:00.859 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getSpectator
+21:51:00.860 TRACE repository.jdbc.SpectatorJdbcRepository 90 findOne - Enter Finding task with username admin 
+21:51:00.860 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:51:00.860 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:51:00.860 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:00.860 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:51:00.860 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:51:00.861 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:00.861 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4fb39cc6)
+21:51:00.861 TRACE repository.jdbc.SpectatorJdbcRepository 144 findOne - Exit: No task found with username admin
+21:51:00.861 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getSpectator
+21:51:00.918 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getAllShows'; parameter types []
+21:51:00.918 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getAllShows
+21:51:00.918 TRACE repository.jdbc.ShowJdbcRepository 80 findAll - Enter
+21:51:00.918 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:51:00.918 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:51:00.918 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:00.918 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:51:00.918 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:51:00.919 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:00.919 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7535cd7d)
+21:51:00.935 TRACE repository.jdbc.ShowJdbcRepository 129 findAll - Exit with([Show{id=1, name='Romeo ', dateTime=2024-01-03T16:00, price=40.0}, Show{id=2, name='Nunta lui Figaro', dateTime=2024-01-08T18:00, price=45.0}, Show{id=3, name='Anotimpurile', dateTime=2024-01-11T14:30, price=44.0}])
+21:51:00.935 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getAllShows
+21:51:37.634 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'login'; parameter types [domain.Login]
+21:51:37.634 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.login
+21:51:37.634 TRACE repository.jdbc.LoginJdbcRepository 26 findEntity - Enter Finding task with username, password and status admin, admin, Admin 
+21:51:37.634 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:51:37.635 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:51:37.635 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:37.635 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:51:37.635 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:51:37.635 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:37.635 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@76f00798)
+21:51:37.636 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.login
+21:51:37.638 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getSpectator'; parameter types [java.lang.String]
+21:51:37.638 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getSpectator
+21:51:37.638 TRACE repository.jdbc.SpectatorJdbcRepository 90 findOne - Enter Finding task with username admin 
+21:51:37.638 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:51:37.638 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:51:37.638 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:37.638 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:51:37.638 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:51:37.639 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:37.639 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@9af1b0d)
+21:51:37.639 TRACE repository.jdbc.SpectatorJdbcRepository 144 findOne - Exit: No task found with username admin
+21:51:37.639 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getSpectator
+21:51:37.646 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getAllShows'; parameter types []
+21:51:37.646 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getAllShows
+21:51:37.646 TRACE repository.jdbc.ShowJdbcRepository 80 findAll - Enter
+21:51:37.646 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:51:37.646 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:51:37.646 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:37.647 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:51:37.647 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:51:37.647 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:37.648 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@34197f99)
+21:51:37.649 TRACE repository.jdbc.ShowJdbcRepository 129 findAll - Exit with([Show{id=1, name='Romeo ', dateTime=2024-01-03T16:00, price=40.0}, Show{id=2, name='Nunta lui Figaro', dateTime=2024-01-08T18:00, price=45.0}, Show{id=3, name='Anotimpurile', dateTime=2024-01-11T14:30, price=44.0}])
+21:51:37.649 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getAllShows
+21:51:55.501 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'addShow'; parameter types [domain.Show]
+21:51:55.501 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.addShow
+21:51:55.501 TRACE repository.jdbc.ShowJdbcRepository 80 findAll - Enter
+21:51:55.501 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:51:55.501 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:51:55.501 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:55.502 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:51:55.502 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:51:55.502 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:55.502 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@412f6640)
+21:51:55.504 TRACE repository.jdbc.ShowJdbcRepository 129 findAll - Exit with([Show{id=1, name='Romeo ', dateTime=2024-01-03T16:00, price=40.0}, Show{id=2, name='Nunta lui Figaro', dateTime=2024-01-08T18:00, price=45.0}, Show{id=3, name='Anotimpurile', dateTime=2024-01-11T14:30, price=44.0}])
+21:51:55.504 TRACE repository.jdbc.ShowJdbcRepository 80 findAll - Enter
+21:51:55.504 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:51:55.504 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:51:55.504 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:55.504 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:51:55.504 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:51:55.505 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:55.505 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@63d0560b)
+21:51:55.506 TRACE repository.jdbc.ShowJdbcRepository 129 findAll - Exit with([Show{id=1, name='Romeo ', dateTime=2024-01-03T16:00, price=40.0}, Show{id=2, name='Nunta lui Figaro', dateTime=2024-01-08T18:00, price=45.0}, Show{id=3, name='Anotimpurile', dateTime=2024-01-11T14:30, price=44.0}])
+21:51:55.506 TRACE repository.jdbc.ShowJdbcRepository 135 save - Enter Saving task Show{id=4, name='aa', dateTime=2024-01-30T12:00, price=22.0}
+21:51:55.506 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:51:55.506 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:51:55.506 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:55.506 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:51:55.507 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:51:55.507 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:55.507 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1ea3899c)
+21:51:55.551 TRACE repository.jdbc.ShowJdbcRepository 173 save - Exit
+21:51:55.551 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.addShow
+21:51:55.553 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getAllShows'; parameter types []
+21:51:55.554 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getAllShows
+21:51:55.554 TRACE repository.jdbc.ShowJdbcRepository 80 findAll - Enter
+21:51:55.555 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:51:55.555 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:51:55.555 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:55.555 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:51:55.556 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:51:55.559 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:51:55.559 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@35e85608)
+21:51:55.562 TRACE repository.jdbc.ShowJdbcRepository 129 findAll - Exit with([Show{id=1, name='Romeo ', dateTime=2024-01-03T16:00, price=40.0}, Show{id=2, name='Nunta lui Figaro', dateTime=2024-01-08T18:00, price=45.0}, Show{id=3, name='Anotimpurile', dateTime=2024-01-11T14:30, price=44.0}, Show{id=4, name='aa', dateTime=2024-01-30T12:00, price=22.0}])
+21:51:55.563 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getAllShows
+21:52:01.500 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'deleteShow'; parameter types [domain.Show]
+21:52:01.500 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.deleteShow
+21:52:01.500 TRACE repository.jdbc.ShowJdbcRepository 178 delete - Enter Deleting task with 4
+21:52:01.500 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:52:01.500 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:52:01.501 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:52:01.501 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:52:01.501 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:52:01.501 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:52:01.501 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@256cf8a4)
+21:52:01.536 TRACE repository.jdbc.ShowJdbcRepository 212 delete - Exit
+21:52:01.536 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.deleteShow
+21:52:01.538 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getAllShows'; parameter types []
+21:52:01.538 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getAllShows
+21:52:01.538 TRACE repository.jdbc.ShowJdbcRepository 80 findAll - Enter
+21:52:01.538 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:52:01.538 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:52:01.539 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:52:01.539 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:52:01.539 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:52:01.540 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:52:01.540 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@770f4a2b)
+21:52:01.541 TRACE repository.jdbc.ShowJdbcRepository 129 findAll - Exit with([Show{id=1, name='Romeo ', dateTime=2024-01-03T16:00, price=40.0}, Show{id=2, name='Nunta lui Figaro', dateTime=2024-01-08T18:00, price=45.0}, Show{id=3, name='Anotimpurile', dateTime=2024-01-11T14:30, price=44.0}])
+21:52:01.541 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getAllShows
+21:52:29.896 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'updateShow'; parameter types [domain.Show]
+21:52:29.896 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.updateShow
+21:52:29.896 TRACE repository.jdbc.ShowJdbcRepository 217 update - Enter Updating task Show{id=3, name='Anotimpurile', dateTime=2024-01-30T14:30, price=45.0}
+21:52:29.898 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:52:29.898 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:52:29.898 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:52:29.898 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:52:29.898 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:52:29.898 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:52:29.898 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5b958a33)
+21:52:29.936 TRACE repository.jdbc.ShowJdbcRepository 236 update - Updated 1 instances
+21:52:29.938 TRACE repository.jdbc.ShowJdbcRepository 257 update - Exit
+21:52:29.938 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.updateShow
+21:52:29.940 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getAllShows'; parameter types []
+21:52:29.940 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getAllShows
+21:52:29.940 TRACE repository.jdbc.ShowJdbcRepository 80 findAll - Enter
+21:52:29.940 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:52:29.940 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:52:29.940 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:52:29.941 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:52:29.941 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:52:29.943 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:52:29.943 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1e56b32)
+21:52:29.945 TRACE repository.jdbc.ShowJdbcRepository 129 findAll - Exit with([Show{id=1, name='Romeo ', dateTime=2024-01-03T16:00, price=40.0}, Show{id=2, name='Nunta lui Figaro', dateTime=2024-01-08T18:00, price=45.0}, Show{id=3, name='Anotimpurile', dateTime=2024-01-30T14:30, price=45.0}])
+21:52:29.945 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getAllShows
+21:52:46.388 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'login'; parameter types [domain.Login]
+21:52:46.389 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.login
+21:52:46.389 TRACE repository.jdbc.LoginJdbcRepository 26 findEntity - Enter Finding task with username, password and status pop, pop, Spectator 
+21:52:46.389 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:52:46.389 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:52:46.389 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:52:46.389 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:52:46.389 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:52:46.390 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:52:46.390 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@56aa16a7)
+21:52:46.391 TRACE repository.jdbc.LoginJdbcRepository 79 findEntity - Exit: No task found with username pop, 
+21:52:46.391 INFO  org.springframework.remoting.support.RemoteInvocationTraceInterceptor 96 invoke - Processing of RmiServiceExporter remote call resulted in exception: service.IServices.login java.lang.Exception: Authentication failed.
+	at server.Server.login(Server.java:47) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220) ~[spring-aop-5.3.27.jar:5.3.27]
+	at jdk.proxy2.$Proxy20.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.27.jar:5.3.27]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:712) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:399) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+
+21:52:46.392 DEBUG org.springframework.remoting.support.RemoteInvocationBasedExporter 94 invoke - Target method failed for RemoteInvocation: method name 'login'; parameter types [domain.Login] java.lang.Exception: Authentication failed.
+	at server.Server.login(Server.java:47) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.support.RemoteInvocationTraceInterceptor.invoke(RemoteInvocationTraceInterceptor.java:80) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220) ~[spring-aop-5.3.27.jar:5.3.27]
+	at jdk.proxy2.$Proxy20.login(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.remoting.support.RemoteInvocation.invoke(RemoteInvocation.java:215) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.support.DefaultRemoteInvocationExecutor.invoke(DefaultRemoteInvocationExecutor.java:39) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.support.RemoteInvocationBasedExporter.invoke(RemoteInvocationBasedExporter.java:78) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.rmi.RmiBasedExporter.invoke(RmiBasedExporter.java:75) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.remoting.rmi.RmiInvocationWrapper.invoke(RmiInvocationWrapper.java:78) ~[spring-context-5.3.27.jar:5.3.27]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:?]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:712) [?:?]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:399) [?:?]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+
+21:53:12.369 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'login'; parameter types [domain.Login]
+21:53:12.369 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.login
+21:53:12.369 TRACE repository.jdbc.LoginJdbcRepository 26 findEntity - Enter Finding task with username, password and status popa, popa, Spectator 
+21:53:12.369 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:12.370 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:12.370 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:12.370 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:12.370 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:12.371 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:12.371 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@33617ac6)
+21:53:12.371 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.login
+21:53:12.375 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getSpectator'; parameter types [java.lang.String]
+21:53:12.375 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getSpectator
+21:53:12.375 TRACE repository.jdbc.SpectatorJdbcRepository 90 findOne - Enter Finding task with username popa 
+21:53:12.375 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:12.376 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:12.376 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:12.376 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:12.376 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:12.376 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:12.377 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1ca4fba7)
+21:53:12.378 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getSpectator
+21:53:12.436 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getAllShows'; parameter types []
+21:53:12.436 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getAllShows
+21:53:12.436 TRACE repository.jdbc.ShowJdbcRepository 80 findAll - Enter
+21:53:12.436 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:12.436 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:12.436 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:12.436 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:12.437 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:12.437 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:12.437 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3e8e15b5)
+21:53:12.438 TRACE repository.jdbc.ShowJdbcRepository 129 findAll - Exit with([Show{id=1, name='Romeo ', dateTime=2024-01-03T16:00, price=40.0}, Show{id=2, name='Nunta lui Figaro', dateTime=2024-01-08T18:00, price=45.0}, Show{id=3, name='Anotimpurile', dateTime=2024-01-30T14:30, price=45.0}])
+21:53:12.438 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getAllShows
+21:53:12.443 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getAllSeats'; parameter types []
+21:53:12.443 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getAllSeats
+21:53:12.443 TRACE repository.jdbc.SeatJdbcRepository 85 findAll - Enter
+21:53:12.443 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:12.443 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:12.443 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:12.443 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:12.443 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:12.444 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:12.444 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@310f0b0c)
+21:53:12.452 TRACE repository.jdbc.SeatJdbcRepository 135 findAll - Exit with([Seat: id 1, lodge A, row 1, number 1, status Free, Seat: id 2, lodge A, row 1, number 2, status Free, Seat: id 3, lodge A, row 1, number 3, status Free, Seat: id 4, lodge A, row 1, number 4, status Free, Seat: id 5, lodge A, row 1, number 5, status Free, Seat: id 6, lodge A, row 1, number 6, status Free, Seat: id 7, lodge A, row 1, number 7, status Free, Seat: id 8, lodge A, row 1, number 8, status Free, Seat: id 9, lodge A, row 1, number 9, status Free, Seat: id 10, lodge A, row 1, number 10, status Free, Seat: id 11, lodge A, row 2, number 1, status Free, Seat: id 12, lodge A, row 2, number 2, status Free, Seat: id 13, lodge A, row 2, number 3, status Free, Seat: id 14, lodge A, row 2, number 4, status Free, Seat: id 15, lodge A, row 2, number 5, status Free, Seat: id 16, lodge A, row 2, number 6, status Free, Seat: id 17, lodge A, row 2, number 7, status Free, Seat: id 18, lodge A, row 2, number 8, status Free, Seat: id 19, lodge A, row 2, number 9, status Free, Seat: id 20, lodge A, row 2, number 10, status Free, Seat: id 21, lodge B, row 1, number 1, status Free, Seat: id 22, lodge B, row 1, number 2, status Free, Seat: id 23, lodge B, row 1, number 3, status Free, Seat: id 24, lodge B, row 1, number 4, status Free, Seat: id 25, lodge B, row 1, number 5, status Free, Seat: id 26, lodge B, row 1, number 6, status Free, Seat: id 27, lodge B, row 1, number 7, status Free, Seat: id 28, lodge B, row 1, number 8, status Free, Seat: id 29, lodge B, row 1, number 9, status Free, Seat: id 30, lodge B, row 1, number 10, status Free, Seat: id 31, lodge B, row 2, number 1, status Free, Seat: id 32, lodge B, row 2, number 2, status Free, Seat: id 33, lodge B, row 2, number 3, status Free, Seat: id 34, lodge B, row 2, number 4, status Free, Seat: id 35, lodge B, row 2, number 5, status Free, Seat: id 36, lodge B, row 2, number 6, status Free, Seat: id 37, lodge B, row 2, number 7, status Free, Seat: id 38, lodge B, row 2, number 8, status Free, Seat: id 39, lodge B, row 2, number 9, status Free, Seat: id 40, lodge B, row 2, number 10, status Free])
+21:53:12.452 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getAllSeats
+21:53:12.458 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getAllSeats'; parameter types []
+21:53:12.459 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getAllSeats
+21:53:12.459 TRACE repository.jdbc.SeatJdbcRepository 85 findAll - Enter
+21:53:12.459 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:12.459 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:12.459 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:12.459 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:12.459 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:12.460 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:12.460 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5fc217a6)
+21:53:12.463 TRACE repository.jdbc.SeatJdbcRepository 135 findAll - Exit with([Seat: id 1, lodge A, row 1, number 1, status Free, Seat: id 2, lodge A, row 1, number 2, status Free, Seat: id 3, lodge A, row 1, number 3, status Free, Seat: id 4, lodge A, row 1, number 4, status Free, Seat: id 5, lodge A, row 1, number 5, status Free, Seat: id 6, lodge A, row 1, number 6, status Free, Seat: id 7, lodge A, row 1, number 7, status Free, Seat: id 8, lodge A, row 1, number 8, status Free, Seat: id 9, lodge A, row 1, number 9, status Free, Seat: id 10, lodge A, row 1, number 10, status Free, Seat: id 11, lodge A, row 2, number 1, status Free, Seat: id 12, lodge A, row 2, number 2, status Free, Seat: id 13, lodge A, row 2, number 3, status Free, Seat: id 14, lodge A, row 2, number 4, status Free, Seat: id 15, lodge A, row 2, number 5, status Free, Seat: id 16, lodge A, row 2, number 6, status Free, Seat: id 17, lodge A, row 2, number 7, status Free, Seat: id 18, lodge A, row 2, number 8, status Free, Seat: id 19, lodge A, row 2, number 9, status Free, Seat: id 20, lodge A, row 2, number 10, status Free, Seat: id 21, lodge B, row 1, number 1, status Free, Seat: id 22, lodge B, row 1, number 2, status Free, Seat: id 23, lodge B, row 1, number 3, status Free, Seat: id 24, lodge B, row 1, number 4, status Free, Seat: id 25, lodge B, row 1, number 5, status Free, Seat: id 26, lodge B, row 1, number 6, status Free, Seat: id 27, lodge B, row 1, number 7, status Free, Seat: id 28, lodge B, row 1, number 8, status Free, Seat: id 29, lodge B, row 1, number 9, status Free, Seat: id 30, lodge B, row 1, number 10, status Free, Seat: id 31, lodge B, row 2, number 1, status Free, Seat: id 32, lodge B, row 2, number 2, status Free, Seat: id 33, lodge B, row 2, number 3, status Free, Seat: id 34, lodge B, row 2, number 4, status Free, Seat: id 35, lodge B, row 2, number 5, status Free, Seat: id 36, lodge B, row 2, number 6, status Free, Seat: id 37, lodge B, row 2, number 7, status Free, Seat: id 38, lodge B, row 2, number 8, status Free, Seat: id 39, lodge B, row 2, number 9, status Free, Seat: id 40, lodge B, row 2, number 10, status Free])
+21:53:12.463 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getAllSeats
+21:53:25.777 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'updateSeatStatus'; parameter types [domain.Seat]
+21:53:25.777 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.updateSeatStatus
+21:53:25.778 TRACE repository.jdbc.SeatJdbcRepository 189 update - Enter Updating task Seat: id 6, lodge A, row 1, number 6, status Reserved
+21:53:25.778 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:25.778 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:25.778 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.778 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:25.778 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:25.779 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.779 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@42d4214a)
+21:53:25.813 TRACE repository.jdbc.SeatJdbcRepository 209 update - Updated 1 instances
+21:53:25.815 TRACE repository.jdbc.SeatJdbcRepository 230 update - Exit
+21:53:25.815 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.updateSeatStatus
+21:53:25.823 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'buyTicketBooking'; parameter types [domain.Ticket, domain.Spectator]
+21:53:25.823 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.buyTicketBooking
+21:53:25.823 TRACE repository.jdbc.TicketJdbcRepository 94 findAll - Enter
+21:53:25.823 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:25.823 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:25.824 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.824 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:25.824 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:25.825 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.826 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7612fdab)
+21:53:25.826 TRACE repository.jdbc.TicketJdbcRepository 144 findAll - Exit with([])
+21:53:25.827 TRACE repository.jdbc.TicketJdbcRepository 94 findAll - Enter
+21:53:25.827 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:25.827 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:25.827 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.827 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:25.827 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:25.828 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.828 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3c079c5e)
+21:53:25.828 TRACE repository.jdbc.TicketJdbcRepository 144 findAll - Exit with([])
+21:53:25.829 TRACE repository.jdbc.TicketJdbcRepository 150 save - Enter Saving task Ticket{id=1, show=Show{id=3, name='Anotimpurile', dateTime=2024-01-30T14:30, price=45.0}, seat=Seat: id 6, lodge A, row 1, number 6, status Reserved, payStatus=Cash}
+21:53:25.829 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:25.829 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:25.829 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.829 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:25.829 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:25.830 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.830 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5283eeda)
+21:53:25.858 TRACE repository.jdbc.TicketJdbcRepository 169 save - Saved 1 instances
+21:53:25.860 TRACE repository.jdbc.TicketJdbcRepository 191 save - Exit
+21:53:25.860 TRACE repository.jdbc.BookingJdbcRepository 90 findAll - Enter
+21:53:25.860 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:25.860 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:25.860 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.861 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:25.861 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:25.862 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.862 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5395f4e)
+21:53:25.863 TRACE repository.jdbc.BookingJdbcRepository 139 findAll - Exit with([])
+21:53:25.863 TRACE repository.jdbc.BookingJdbcRepository 90 findAll - Enter
+21:53:25.863 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:25.863 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:25.863 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.863 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:25.863 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:25.864 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.864 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5dcd6db)
+21:53:25.865 TRACE repository.jdbc.BookingJdbcRepository 139 findAll - Exit with([])
+21:53:25.865 TRACE repository.jdbc.BookingJdbcRepository 145 save - Enter Saving task Booking{id=1, spectator=Spectator{firstName='Andreea', lastName='Popa', email='popa.a@gmail.com'}, ticket=Ticket{id=1, show=Show{id=3, name='Anotimpurile', dateTime=2024-01-30T14:30, price=45.0}, seat=Seat: id 6, lodge A, row 1, number 6, status Reserved, payStatus=Cash}}
+21:53:25.865 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:25.865 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:25.866 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.866 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:25.866 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:25.866 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.866 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@48e41d84)
+21:53:25.896 TRACE repository.jdbc.BookingJdbcRepository 163 save - Saved 1 instances
+21:53:25.899 TRACE repository.jdbc.BookingJdbcRepository 184 save - Exit
+21:53:25.899 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.buyTicketBooking
+21:53:25.900 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getAllSeats'; parameter types []
+21:53:25.900 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getAllSeats
+21:53:25.900 TRACE repository.jdbc.SeatJdbcRepository 85 findAll - Enter
+21:53:25.901 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:25.901 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:25.901 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.901 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:25.901 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:25.902 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.902 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@145144e5)
+21:53:25.904 TRACE repository.jdbc.SeatJdbcRepository 135 findAll - Exit with([Seat: id 1, lodge A, row 1, number 1, status Free, Seat: id 2, lodge A, row 1, number 2, status Free, Seat: id 3, lodge A, row 1, number 3, status Free, Seat: id 4, lodge A, row 1, number 4, status Free, Seat: id 5, lodge A, row 1, number 5, status Free, Seat: id 6, lodge A, row 1, number 6, status Reserved, Seat: id 7, lodge A, row 1, number 7, status Free, Seat: id 8, lodge A, row 1, number 8, status Free, Seat: id 9, lodge A, row 1, number 9, status Free, Seat: id 10, lodge A, row 1, number 10, status Free, Seat: id 11, lodge A, row 2, number 1, status Free, Seat: id 12, lodge A, row 2, number 2, status Free, Seat: id 13, lodge A, row 2, number 3, status Free, Seat: id 14, lodge A, row 2, number 4, status Free, Seat: id 15, lodge A, row 2, number 5, status Free, Seat: id 16, lodge A, row 2, number 6, status Free, Seat: id 17, lodge A, row 2, number 7, status Free, Seat: id 18, lodge A, row 2, number 8, status Free, Seat: id 19, lodge A, row 2, number 9, status Free, Seat: id 20, lodge A, row 2, number 10, status Free, Seat: id 21, lodge B, row 1, number 1, status Free, Seat: id 22, lodge B, row 1, number 2, status Free, Seat: id 23, lodge B, row 1, number 3, status Free, Seat: id 24, lodge B, row 1, number 4, status Free, Seat: id 25, lodge B, row 1, number 5, status Free, Seat: id 26, lodge B, row 1, number 6, status Free, Seat: id 27, lodge B, row 1, number 7, status Free, Seat: id 28, lodge B, row 1, number 8, status Free, Seat: id 29, lodge B, row 1, number 9, status Free, Seat: id 30, lodge B, row 1, number 10, status Free, Seat: id 31, lodge B, row 2, number 1, status Free, Seat: id 32, lodge B, row 2, number 2, status Free, Seat: id 33, lodge B, row 2, number 3, status Free, Seat: id 34, lodge B, row 2, number 4, status Free, Seat: id 35, lodge B, row 2, number 5, status Free, Seat: id 36, lodge B, row 2, number 6, status Free, Seat: id 37, lodge B, row 2, number 7, status Free, Seat: id 38, lodge B, row 2, number 8, status Free, Seat: id 39, lodge B, row 2, number 9, status Free, Seat: id 40, lodge B, row 2, number 10, status Free])
+21:53:25.905 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getAllSeats
+21:53:25.909 TRACE org.springframework.remoting.support.RemoteInvocationBasedExporter 75 invoke - Executing RemoteInvocation: method name 'getAllSeats'; parameter types []
+21:53:25.909 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 76 invoke - Incoming RmiServiceExporter remote call: service.IServices.getAllSeats
+21:53:25.909 TRACE repository.jdbc.SeatJdbcRepository 85 findAll - Enter
+21:53:25.909 TRACE repository.jdbc.JdbcUtils 55 getConnection - Enter
+21:53:25.909 TRACE repository.jdbc.JdbcUtils 22 getNewConnection - Enter
+21:53:25.909 INFO  repository.jdbc.JdbcUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.909 INFO  repository.jdbc.JdbcUtils 30 getNewConnection - User: test
+21:53:25.909 INFO  repository.jdbc.JdbcUtils 31 getNewConnection - Password: null
+21:53:25.910 INFO  repository.jdbc.JdbcUtils 41 getNewConnection - Connected successfully to jdbc:sqlite://E://Faculty//Undergraduate//FMI//2020-2021//Computer Science Domain//Semester 4//Computer Science//Software Systems Engineering//Labs//Lab 5-7//TheaterCompany - Copy//theaterCompany.db
+21:53:25.910 TRACE repository.jdbc.JdbcUtils 64 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@586a8631)
+21:53:25.912 TRACE repository.jdbc.SeatJdbcRepository 135 findAll - Exit with([Seat: id 1, lodge A, row 1, number 1, status Free, Seat: id 2, lodge A, row 1, number 2, status Free, Seat: id 3, lodge A, row 1, number 3, status Free, Seat: id 4, lodge A, row 1, number 4, status Free, Seat: id 5, lodge A, row 1, number 5, status Free, Seat: id 6, lodge A, row 1, number 6, status Reserved, Seat: id 7, lodge A, row 1, number 7, status Free, Seat: id 8, lodge A, row 1, number 8, status Free, Seat: id 9, lodge A, row 1, number 9, status Free, Seat: id 10, lodge A, row 1, number 10, status Free, Seat: id 11, lodge A, row 2, number 1, status Free, Seat: id 12, lodge A, row 2, number 2, status Free, Seat: id 13, lodge A, row 2, number 3, status Free, Seat: id 14, lodge A, row 2, number 4, status Free, Seat: id 15, lodge A, row 2, number 5, status Free, Seat: id 16, lodge A, row 2, number 6, status Free, Seat: id 17, lodge A, row 2, number 7, status Free, Seat: id 18, lodge A, row 2, number 8, status Free, Seat: id 19, lodge A, row 2, number 9, status Free, Seat: id 20, lodge A, row 2, number 10, status Free, Seat: id 21, lodge B, row 1, number 1, status Free, Seat: id 22, lodge B, row 1, number 2, status Free, Seat: id 23, lodge B, row 1, number 3, status Free, Seat: id 24, lodge B, row 1, number 4, status Free, Seat: id 25, lodge B, row 1, number 5, status Free, Seat: id 26, lodge B, row 1, number 6, status Free, Seat: id 27, lodge B, row 1, number 7, status Free, Seat: id 28, lodge B, row 1, number 8, status Free, Seat: id 29, lodge B, row 1, number 9, status Free, Seat: id 30, lodge B, row 1, number 10, status Free, Seat: id 31, lodge B, row 2, number 1, status Free, Seat: id 32, lodge B, row 2, number 2, status Free, Seat: id 33, lodge B, row 2, number 3, status Free, Seat: id 34, lodge B, row 2, number 4, status Free, Seat: id 35, lodge B, row 2, number 5, status Free, Seat: id 36, lodge B, row 2, number 6, status Free, Seat: id 37, lodge B, row 2, number 7, status Free, Seat: id 38, lodge B, row 2, number 8, status Free, Seat: id 39, lodge B, row 2, number 9, status Free, Seat: id 40, lodge B, row 2, number 10, status Free])
+21:53:25.912 DEBUG org.springframework.remoting.support.RemoteInvocationTraceInterceptor 82 invoke - Finished processing of RmiServiceExporter remote call: service.IServices.getAllSeats

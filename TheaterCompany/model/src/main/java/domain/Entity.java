@@ -1,5 +1,8 @@
 package domain;
 
+import domain.validators.ValidationException;
+import domain.validators.Validator;
+
 import java.io.Serializable;
 
 /**

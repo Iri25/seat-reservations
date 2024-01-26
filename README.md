@@ -1,4 +1,10 @@
-Software Systems Engineering
+Java client-server application structured on 6 modules with layered architecture. The model module comprises the data access layer with data validation ([domain package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/model/src/main/java/domain)). The entity data has been mapped to the Hibernate ORM (Object Relational Mapping). The persistence module comprises the persistence layer cu Java Database Connectivity (JDBC) for accessing the relational databases from Java program ([repository package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/persistence/src/main/java/repository)) and the services module contains the business layer which is an interface of all services ([service package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/services/src/main/java/service)). The server module implements all the functionalities required for the client module that comprises the presentation layer ([controller package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/client/src/main/java/client/controller)). 
+
+The data is saved in the MySQL database using the connection configurations from the app.config file (client and server). The interaction with the user is done through a graphical interface (GUI), developed in JavaFX (fxml files are found in [views package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/client/src/main/resources/views)).
+
+Key concepts are abstraction, encapsulation, inheritance, polymorphism, validations, exceptions, reading from files and storing in files, reading from a database and storing from a database.
+
+Application for a social network with a graphical interface which supports operations such as:
 
 SEAT RESERVATIONS
 

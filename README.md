@@ -16,3 +16,5 @@ The application supports the following operations:
 9. View seats (spectator)
 10. Seat reservation (spectator)
 11. Buy ticket in cash or by card (spectator)
+
+The use cases can and application interaction planning can be found in the [Use cases. Iterations planning](https://github.com/Iri25/seat-reservations/blob/main/Use%20cases.%20Iterations%20planning.pdf) file.

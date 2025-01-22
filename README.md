@@ -1,6 +1,7 @@
 # seat-reservations
 Java Spring Boot client-server applicationfor seat reservations from a theater company with a graphical interface. 
 
+##
 Desktop application structured on 6 modules with layered architecture. 
 - The model module comprises the data access layer with its validation ([domain package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/model/src/main/java/domain)).
 - The entity data has been mapped with Hibernate ORM (Object Relational Mapping).
@@ -11,9 +12,18 @@ Desktop application structured on 6 modules with layered architecture.
 - The interaction with the user is done through a graphical interface (GUI), developed in JavaFX (fxml files are found in [views package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/client/src/main/resources/views)).
 
 ## Key concepts:
--- abstraction, encapsulation, inheritance, polymorphism, validations, exceptions, alerts, mapping, reading from a database and storing from a database.
+- abstraction
+- encapsulation
+- inheritance
+- polymorphism
+- validations
+- exceptions
+- alerts
+- mapping
+- reading from a database
+- storing from a database
 
-## Requirements
+## Requirements:
 
 A theatrical institution provides the spectators with a system for reserving seats for performances. 
 Every day, the institution has only one performance, for which spectators can reserve seats starting from morning. 

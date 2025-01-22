@@ -1,5 +1,7 @@
 # seat-reservations
-Java Spring Boot client-server application structured on 6 modules with layered architecture. 
+Java Spring Boot client-server applicationfor seat reservations from a theater company with a graphical interface. 
+
+Desktop application structured on 6 modules with layered architecture. 
 - The model module comprises the data access layer with its validation ([domain package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/model/src/main/java/domain)).
 - The entity data has been mapped with Hibernate ORM (Object Relational Mapping).
 - The persistence module comprises the persistence layer with Java Database Connectivity (JDBC) for accessing the relational databases from Java program ([repository package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/persistence/src/main/java/repository)) and the services module contains the business layer which is an interface of all services ([service package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/services/src/main/java/service)).
@@ -8,16 +10,17 @@ Java Spring Boot client-server application structured on 6 modules with layered 
 - The Java library, Apache Log4j (client and server package) was used for messages history.
 - The interaction with the user is done through a graphical interface (GUI), developed in JavaFX (fxml files are found in [views package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/client/src/main/resources/views)).
 
-# Key concepts:
-* abstraction, encapsulation, inheritance, polymorphism, validations, exceptions, alerts, mapping, reading from a database and storing from a database.
+## Key concepts:
+-- abstraction, encapsulation, inheritance, polymorphism, validations, exceptions, alerts, mapping, reading from a database and storing from a database.
 
-Desktop application for seat reservations from a theater company with a graphical interface. 
+## Requirements
+
 A theatrical institution provides the spectators with a system for reserving seats for performances. 
 Every day, the institution has only one performance, for which spectators can reserve seats starting from morning. 
 For a place in the hall, the following information is stored: position (row x, lodge y, etc.), number and price. 
-The terminals made available to spectators display the entire configuration of the hall, specifying for each place the position, number, price and condition (free or reserved). Using such of the terminal, the spectator can enter his personal data, can select one or more places and can trigger a button to reserve them. After each booking, all terminals will display updated situation regarding the occupancy of the room.
+The terminals made available to spectators display the entire configuration of the hall, specifying for each place the position, number, price and condition (free or reserved). 
+Using such of the terminal, the spectator can enter his personal data, can select one or more places and can trigger a button to reserve them. After each booking, all terminals will display updated situation regarding the occupancy of the room.
 
-## Requirements
 The application supports the following operations:
 1. Registration
 2. Login

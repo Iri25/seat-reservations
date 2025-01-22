@@ -8,7 +8,8 @@ Java Spring Boot client-server application structured on 6 modules with layered 
 - The Java library, Apache Log4j (client and server package) was used for messages history.
 - The interaction with the user is done through a graphical interface (GUI), developed in JavaFX (fxml files are found in [views package](https://github.com/Iri25/sse-orm-project-Iri25/tree/main/TheaterCompany/client/src/main/resources/views)).
 
-# Key concepts are abstraction, encapsulation, inheritance, polymorphism, validations, exceptions, alerts, mapping, reading from a database and storing from a database.
+# Key concepts:
+* abstraction, encapsulation, inheritance, polymorphism, validations, exceptions, alerts, mapping, reading from a database and storing from a database.
 
 Desktop application for seat reservations from a theater company with a graphical interface. 
 A theatrical institution provides the spectators with a system for reserving seats for performances. 

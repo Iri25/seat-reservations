@@ -17,6 +17,7 @@ Every day, the institution has only one performance, for which spectators can re
 For a place in the hall, the following information is stored: position (row x, lodge y, etc.), number and price. 
 The terminals made available to spectators display the entire configuration of the hall, specifying for each place the position, number, price and condition (free or reserved). Using such of the terminal, the spectator can enter his personal data, can select one or more places and can trigger a button to reserve them. After each booking, all terminals will display updated situation regarding the occupancy of the room.
 
+## Requirements
 The application supports the following operations:
 1. Registration
 2. Login
